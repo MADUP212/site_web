@@ -1,0 +1,42 @@
+/* Norme graphique des présentations (référence : présentation du 13 novembre 2026, presentation.html).
+   Règles et explications : presentation/STYLE.md.
+   Style de la présentation GRCP 2026 (masdupuis.com) : noir, gris et une seule couleur d'accent.
+   L'accent est réservé à la série ou au chiffre dont on parle. */
+:root { --encre: #111; --gris: #6b6b6b; --pale: #d9d9d9; --fond: #fff; --accent: #1f5fbf; }
+html, body { background: var(--fond); }
+.reveal { font-family: "Times New Roman", Times, serif; font-size: 30px; color: var(--encre); }
+.reveal .slides { text-align: left; }
+.reveal .slides section { box-sizing: border-box; height: 100%; padding: 26px 56px 20px 56px; }
+.reveal h1, .reveal h2 { font-family: inherit; font-weight: bold; margin: 0; line-height: 1.12; color: var(--encre); text-transform: none; letter-spacing: 0; }
+.reveal h2 { font-size: 44px; padding-bottom: 12px; border-bottom: 2px solid var(--encre); margin-bottom: 18px; }
+.reveal p { margin: 0; line-height: 1.25; }
+.reveal .accent { color: var(--accent); }
+.reveal .gris { color: var(--gris); }
+.reveal .slide-number { font-family: inherit; font-size: 18px; color: var(--gris); background: none; }
+.reveal .progress { color: var(--accent); height: 4px; }
+.reveal .controls { color: var(--pale); }
+
+/* Page titre et page de fin */
+.reveal section.titre { display: flex !important; flex-direction: column; justify-content: center; }
+.reveal section.titre h1 { font-size: 84px; }
+.reveal section.titre .sous-titre { font-size: 40px; margin-top: 18px; }
+.reveal section.titre .auteurs { font-size: 28px; margin-top: 54px; }
+.reveal section.titre .lieu { font-size: 24px; color: var(--gris); margin-top: 8px; }
+/* Impression (?print-pdf) : reveal.js enlève les marges et le flex des diapositives ; on les remet */
+html.reveal-print body .reveal .slides section { padding: 26px 56px 20px 56px !important; }
+html.reveal-print body .reveal .slides section.titre { display: flex !important; }
+
+/* Graphiques et légendes qui changent à chaque clic */
+.reveal .graphique svg { display: block; width: 100%; height: auto; }
+.reveal .graphique text { font-family: "Times New Roman", Times, serif; }
+.reveal .legendes { position: relative; height: 56px; margin-top: 4px; }
+.reveal .legendes p { position: absolute; left: 0; right: 0; top: 0; font-size: 32px; font-weight: bold; text-align: center; }
+.reveal .legendes p small { font-weight: normal; font-size: 24px; color: var(--gris); }
+.reveal .pied { position: absolute; left: 56px; right: 56px; bottom: 22px; font-size: 21px; color: var(--gris); }
+.reveal .pied b { color: var(--encre); }
+.reveal .alerte { color: #d9730d; }   /* mers et océans, mises en garde (comme « En mer » le 13 novembre) */
+/* Périmètre de la mesure, en haut à droite du titre : « Sur terre » (pays et territoires) ou
+   « Sur terre et en mer » (mers et océans compris, comptés par l'IISS depuis 2021 seulement) */
+.reveal h2 .perimetre { float: right; margin-top: 8px; padding: 3px 14px; font-size: 22px; font-weight: normal;
+  color: var(--gris); border: 2px solid var(--gris); border-radius: 4px; }
+.reveal h2 .perimetre.mer { color: #d9730d; border-color: #d9730d; }

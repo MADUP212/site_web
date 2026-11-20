@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Military Data Analysis — slides by Marc-Antoine S. Dupuis and Adam Ménard, based on the IISS Military Balance+.">
+<link rel="canonical" href="https://www.masdupuis.com/military/">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<title>Military Data Analysis — Marc-Antoine S. Dupuis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css?v=202610191710">
+<style>
+  /* Slides (reveal.js, 1280 x 720) shown in the page, in a 16:9 frame */
+  .intro { font-size: 18px; line-height: 1.65; }
+  .decks { display: grid; gap: 56px; margin-top: 40px; }
+  .deck .date { font-family: var(--sans); font-size: 12.5px; font-weight: 500; letter-spacing: 0.02em; color: var(--muted); }
+  .deck h3 { font-size: 21px; font-weight: 400; line-height: 1.35; margin: 4px 0 6px; }
+  .deck .where { font-size: 15px; line-height: 1.5; color: var(--muted); margin: 0 0 14px; }
+  .deck .frame { aspect-ratio: 16 / 9; width: 100%; border: 1px solid var(--rule); background: #fff;
+                 box-shadow: 0 1px 2px rgba(21, 32, 43, 0.06); }
+  .deck iframe { display: block; width: 100%; height: 100%; border: 0; }
+  .deck .open { margin-top: 10px; font-family: var(--sans); font-weight: 500; font-size: 14px; }
+  .deck .open a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rule); }
+  .deck .open a:hover { color: var(--accent); border-bottom-color: currentColor; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="header-left">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+        <svg class="open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+        <svg class="close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <a class="brand" href="../">
+        <span class="brand-text">
+          <span class="brand-name">Marc-Antoine S. Dupuis</span>
+          <abbr class="brand-initials" title="Marc-Antoine S. Dupuis">M.S. Dupuis</abbr>
+          <span class="brand-role"><span class="short">M.A. Student · ULaval</span><span class="long">Master's Student, Université Laval</span></span>
+        </span>
+      </a>
+    </div>
+    <nav class="site-nav" aria-label="Main">
+      <a href="../#projects">Projects</a>
+      <a href="../#papers">Papers</a>
+      <a href="../#teaching">Teaching</a>
+      <a href="../#conferences">Conferences</a>
+      <a href="../#about">About</a>
+    </nav>
+  </div>
+  <nav class="menu" id="menu" aria-label="Main">
+    <a href="../#projects">Projects</a>
+    <a href="../#papers">Papers</a>
+    <a href="../#teaching">Teaching</a>
+    <a href="../#conferences">Conferences</a>
+    <a href="../#about">About</a>
+  </nav>
+</header>
+
+<main class="wrap" id="top">
+  <section class="section">
+    <h2>Military Data Analysis</h2>
+    <div class="section-body">
+      <p class="intro">What does data tell us about the real engagement of our countries? Research assistant work at the
+        <a href="https://www.esei.ulaval.ca" target="_blank" rel="noopener noreferrer">ESEI</a>, with Adam Ménard, based on the
+        <a href="https://www.iiss.org/the-military-balance-plus/" target="_blank" rel="noopener noreferrer">IISS Military Balance+</a>.
+        Click a slide, then use the arrow keys to step through each chart.</p>
+
+      <div class="decks">
+        <article class="deck">
+          <div class="date">November 2026</div>
+          <h3>US Military Presence in the Regional Combatant Commands</h3>
+          <p class="where">Troops, Indo-Pacific vs Europe, exercises, 2014–2025</p>
+          <div class="frame"><iframe src="slides/combatant_commands.html" title="US Military Presence in the Regional Combatant Commands (slides)" loading="lazy"></iframe></div>
+          <p class="open"><a href="slides/combatant_commands.html" target="_blank" rel="noopener noreferrer">Open full screen</a></p>
+        </article>
+
+        <article class="deck">
+          <div class="date">November 2026</div>
+          <h3>US Troops Around the World</h3>
+          <p class="where">Defense budget and deployments, 2008–2026</p>
+          <div class="frame"><iframe src="slides/us_troops_abroad.html" title="US Troops Around the World (slides)" loading="lazy"></iframe></div>
+          <p class="open"><a href="slides/us_troops_abroad.html" target="_blank" rel="noopener noreferrer">Open full screen</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Marc-Antoine S. Dupuis</div>
+</footer>
+
+<script src="../assets/site.js?v=202610191710"></script>
+</body>
+</html>
